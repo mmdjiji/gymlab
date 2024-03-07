@@ -1,5 +1,5 @@
 import gymnasium as gym
-env = gym.make("CartPole-v1")
+env = gym.make("CartPole-v1", render_mode="human")
 
 observation, info = env.reset(seed=42)
 for _ in range(1000):
@@ -8,5 +8,5 @@ for _ in range(1000):
 
   if terminated or truncated:
     observation, info = env.reset()
-print(env)
+
 env.close()
